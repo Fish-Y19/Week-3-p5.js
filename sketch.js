@@ -10,6 +10,7 @@ let snowflakes = [];
 function setup() {
   
   createCanvas(400, 600);
+  my Canvas.parent('my Container');
 
   angleMode(DEGREES);
 

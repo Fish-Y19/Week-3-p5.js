@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Functions</title>
+</head>
+<body>
+
+<div id="output"></div>
+
+<script>
+const fish = ["shark", "trout", "carp"];
+const mammals = ["bear", "goat", "leopard"];
+const birds = ["eagle", "robin", "crow"];
+
+let animals = [];
+let message = "";
+
+function printArray() {
+
+    let creatures = {
+        fish: fish,
+        mammal: mammals,
+        bird: birds
+    };
+
+    animals = creatures;
+
+    return "<p>The array is full of creatures. There should be 3 of each type...</p>";
+}
+
+message = printArray();
+message += "<p>There are " + creatures.fish.length + " fish.</p>";
+
+document.getElementById("output").innerHTML = message;
+</script>
+
+</body>
+</html>

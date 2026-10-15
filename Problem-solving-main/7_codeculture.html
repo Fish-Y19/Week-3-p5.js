@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zoo Animals</title>
+</head>
+<body>
+
+<h1>Zoo Animals</h1>
+<div id="output"></div>
+
+<script>
+
+const lion = {
+    name: "Lion",
+    habitat: "Savannah"
+};
+
+const tiger = {
+    name: "Tiger",
+    habitat: "Jungle"
+};
+
+const dave = {
+    name: "Penguin",
+    habitat: "Antarctica"
+};
+
+const animals = [lion, tiger, penguin];
+
+let message = "<h2>Animal List</h2>";
+
+for(let i = 0; i < animals.length; i++) {
+    message += "<p>" + animals[i].name + "</p>";
+}
+
+document.getElementById("output").innerHTML = message;
+
+</script>
+
+</body>
+</html>

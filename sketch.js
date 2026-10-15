@@ -44,6 +44,16 @@ function draw() {
     flake.display();
   }
 }
+noStroke();
+  fill(255);
+  textAlign(CENTER);
+  textSize(14);
+  text(
+    beat.isPlaying() ? 'Click to stop the music' : 'Click to play the music',
+    width / 2,
+    height - 18
+  );
+}
 
 // Define the snowflake class
 

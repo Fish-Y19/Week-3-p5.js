@@ -1,7 +1,14 @@
+let beat;
+// Load sound file before canvas loads so it is ready
+function preload() {
+  beat = loadSound('beat.mp3');
+}
+
 // Define array to hold snowflake objects
 let snowflakes = [];
 
 function setup() {
+  
   createCanvas(400, 600);
 
   angleMode(DEGREES);
@@ -14,6 +21,14 @@ function setup() {
 
   // Create screen reader accessible description
   describe('Snowflakes falling on a black background.');
+}
+
+function mousePressed() {
+  if (beat.isPlaying()) {
+    beat.stop();
+  } else {
+    beat.loop();
+  }
 }
 
 function draw() {

@@ -8,7 +8,8 @@ function preload() {
 
 function setup() {
     createCanvas(600, 400);
-    colorMode(HSB, 360, 100, 100);
+    colorMode(HSB, 360, 100, 100, 1);
+
     analyzer = new p5.Amplitude();
     analyzer.setInput(beat);
 }
@@ -38,7 +39,7 @@ function draw() {
     fill(0, 0, 100);
     textAlign(CENTER);
     textSize(16);
-    text('Click anywhere to play or stop the beat', width / 2, height - 30);
+    text('Click to play or stop the beat', width / 2, height - 30);
 }
 
 function mousePressed() {
